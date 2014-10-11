@@ -14,17 +14,29 @@ class MainHandler(webapp2.RequestHandler):
         <html>
             <head>
                 <title>Simple Form</title>
+                <style>
+                    body{
+                        font-family: sans-serif;
+                    }
+                    label{
+    display: inline-block;
+    width: 250px;
+    text-align: right;
+}
+
+                    
+                </style>
             </head>
             <body>'''
             
         page_body = '''<h3>Contest Entry</h3>
         
                         <form method="GET" action="">
-                            <label>First Name: </label><input type="text" name="firstname" />
-                            <label>Last Name: </label><input type="text" name="lastname" />
-                            <label>Email: </label><input type="text" name="email" />
-                            <label>Street Address: </label><input type="text" name="address" />
-                            <label>Phone Number: </label><input type="text" name="phone" />
+                            <label>First Name: </label><input type="text" name="firstname" /><br>
+                            <label>Last Name: </label><input type="text" name="lastname" /><br>
+                            <label>Email: </label><input type="text" name="email" /><br>
+                            <label>Street Address: </label><input type="text" name="address" /><br>
+                            <label>Phone Number: </label><input type="text" name="phone" /><br>
                             
                             <p>What gender are you?</p>
                             <input type="radio" name="gender" value="male">Male<br>
