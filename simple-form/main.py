@@ -40,6 +40,20 @@ class MainHandler(webapp2.RequestHandler):
                         
             </body>
         </html>'''
+        
+        if self.request.GET:
+            firstname = self.request.GET['firstname']
+            lastname = self.request.GET['lastname']
+            email = self.request.GET['email']
+            address = self.request.GET['address']
+            phone = self.request.GET['phone']
+            gender = self.request.GET['gender']
+            prize = self.request.GET['prize']
+            self.response.write(page_head + 'First Name: ' + firstname + ' Last Name: ' + lastname +
+                                ' Email: ' + email + ' Address: ' + address + ' Phone: ' + phone +
+                                ' Gender: ' + gender + ' Prizes: ' + prize)
+        else:
+            self.response.write(page_head + page_body)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
